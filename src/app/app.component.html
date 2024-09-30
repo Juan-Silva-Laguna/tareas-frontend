@@ -1,0 +1,9 @@
+<div class="container">
+  <app-formulario (notaActualizada)="actualizar($event)" [datosNota]="datosNota" (notaNueva)="agregar($event)"></app-formulario>
+
+  <hr>
+  <h2>Lista de Notas:</h2>
+  <app-lista (notaEditar)="editar($event)" [notas]="notas"></app-lista>
+
+</div>
+<router-outlet />

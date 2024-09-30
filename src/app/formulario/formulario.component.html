@@ -1,0 +1,11 @@
+<div class="row col-7 mx-auto mt-5">
+    <h1 class="text-center">BLOG DE NOTAS</h1>
+    <hr>
+    <div class="mb-3">
+        <label for="nota" class="form-label">Escribir Nota:</label>
+        <textarea class="form-control" [(ngModel)]="nota" id="nota" rows="3"></textarea>
+    </div>
+    <div class="mb-3">
+        <input type="submit" (click)="agregar($event)" class="btn btn-dark" [value]="datosNota ? 'Actualizar /' : 'Agregar +'" >
+    </div>
+</div>

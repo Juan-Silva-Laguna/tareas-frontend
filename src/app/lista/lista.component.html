@@ -1,0 +1,12 @@
+<ul>
+    <li *ngFor="let n of notas">
+        <span [class.truncated]="!n.isExpanded">{{ n.nota | slice:0:200 }}</span>
+        <span *ngIf="n.nota.length > 200 && n.isExpanded">{{ n.nota | slice:200 }}</span>
+        <b *ngIf="n.nota.length > 200" (click)="toggleExpand(n)">
+            {{ n.isExpanded ? 'Ver Menos' : 'Ver Más ...' }}
+        </b>
+        <i class="fa fa-pencil m-3" (click)="editar(n.id)"></i>
+        <i class="fa fa-trash m-3" (click)="eliminar(n.id)"></i>
+        <hr>
+    </li>
+</ul>
